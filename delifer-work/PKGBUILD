@@ -1,0 +1,22 @@
+# Maintainer: Alex Delifer <alex@delifer.ca>
+pkgname=delifer-work
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Tools that allow me to work"
+arch=('any')
+url="https://github.com/alexdelifer/arch-pkgs"
+install=delifer-work.install
+license=('MIT')
+depends=(
+    teams
+    subversion
+    ccollab-client10
+    google-chrome
+    microsoft-edge-stable-bin
+    vmware-workstation
+    freerdp
+    cifs-utils
+    nfs-utils
+    evolution
+    evolution-ews
+)

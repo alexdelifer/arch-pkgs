@@ -1,0 +1,18 @@
+# Maintainer: Alex Delifer <alex@delifer.ca>
+pkgname=delifer-repo
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Pacman repo delifer systems"
+arch=('any')
+url="https://github.com/alexdelifer/arch-pkgs"
+install=delifer-repo.install
+license=('MIT')
+depends=()
+md5sums=('741b8e0ac6adfab379be4171fc182680')
+
+source=('delifer.pacman')
+
+package() {
+    # Dropin files
+    install -Dm 0644 delifer.pacman "$pkgdir/etc/pacman.d/delifer"
+}

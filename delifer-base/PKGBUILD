@@ -1,0 +1,68 @@
+# Maintainer: Alex Delifer <alex@delifer.ca>
+pkgname=delifer-base
+pkgver=0.0.4
+pkgrel=1
+pkgdesc="Base system configuration for delifer systems"
+arch=('any')
+url="https://github.com/alexdelifer/arch-pkgs"
+install=delifer-base.install
+license=('MIT')
+depends=(
+    base
+    base-devel-meta
+    yay
+    zsh
+    neovim
+    python-neovim
+    tmux
+    git
+    stow
+    powershell-bin
+    duf
+    needrestart
+    downgrade
+    kernel-modules-hook
+    pacman-cleanup-hook
+    docker
+    rclone
+    aurutils
+    aurto
+    zramd
+    zerotier-one
+    powertop
+    pacman-contrib
+    arch-install-scripts
+    keybase
+    kbfs
+    fzf
+    exa
+    earlyoom
+    cheat
+    bat
+    rar
+    unrar
+    curl
+    wget
+    wpa_supplicant
+    iwd
+    fuse
+    iptables-nft
+    libvirt
+    bridge-utils
+    openbsd-netcat
+    openssh
+    htop
+    ranger
+)
+md5sums=('a28ba1709db9a9c1e54f3de1bc0952d5'
+    '464c1f0bcca76c01fcb2474d205245c2')
+
+source=('sudoers.wheel'
+    'fuse.conf')
+
+package() {
+    # Dropin files
+    install -Dm 0600 sudoers.wheel "$pkgdir/etc/sudoers.d/wheel"
+    # Post install replacements
+    install -Dm 0644 fuse.conf "$pkgdir/etc/fuse.delifer.conf"
+}

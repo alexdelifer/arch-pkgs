@@ -1,0 +1,58 @@
+# Maintainer: Alex Delifer <alex@delifer.ca>
+pkgname=delifer-hack
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Hacking tools for delifer systems"
+arch=('any')
+url="https://github.com/alexdelifer/arch-pkgs"
+install=delifer-hack.install
+license=('MIT')
+# pacman -Sl blackarch | grep "\[installed\]" | awk '{print $2}'
+depends=(
+    blackarch-keyring
+    aircrack-ng
+    argon2
+    armitage
+    bettercap
+    bettercap-ui
+    bully
+    cowpatty
+    dislocker
+    elfutils
+    exiv2
+    gconf
+    gksu
+    hashcat
+    hcxdumptool
+    hcxtools
+    impacket
+    iputils
+    libgksu
+    libpst
+    macchanger
+    metasploit
+    mtr
+    netdiscover
+    nmap
+    pcredz
+    pfring-dkms
+    pixiewps
+    proxychains-ng
+    pyrit
+    python-backcall
+    python-crcmod
+    python-python-libpcap
+    reaver
+    scapy
+    tcpdump
+    wifite
+    wireshark-cli
+    wireshark-qt
+)
+#md5sums=('6d5d3742299e4fc96747998270554a9f')
+#source=('delifer.pacman')
+
+#package() {
+#    # Dropin files
+#    install -Dm 0644 delifer.pacman "$pkgdir/etc/pacman.d/delifer"
+#}

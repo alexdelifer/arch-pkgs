@@ -1,0 +1,80 @@
+# Maintainer: Alex Delifer <alex@delifer.ca>
+pkgname=delifer-graphical
+pkgver=0.0.2
+pkgrel=1
+pkgdesc="Graphical system configuration for delifer systems"
+arch=('any')
+url="https://github.com/alexdelifer/arch-pkgs"
+install=delifer-graphical.install
+license=('MIT')
+depends=(
+    delifer-base
+    # Communication
+    evolution
+    evolution-ews
+    discord
+    teams
+    # Media
+    mpv
+    spotify
+    plex-media-player
+    # Browser
+    firefox
+    google-chrome
+    # Sway / i3
+    sway
+    swayidle
+    swaybg
+    swaylock
+    i3-gaps
+    dmenu
+    i3lock
+    i3status
+    rofi
+    picom
+    mako
+    kanshi
+    dunst
+    alacritty
+    # Gnome
+    gnome-meta
+    plymouth
+    gparted
+    accerciser
+    dconf-editor
+    devhelp
+    evolution
+    five-or-more
+    four-in-a-row
+    ghex
+    glade
+    gnome-builder
+    gnome-chess
+    gnome-code-assistance
+    gnome-devel-docs
+    gnome-klotski
+    gnome-mahjongg
+    gnome-mines
+    gnome-multi-writer
+    gnome-nettool
+    gnome-nibbles
+    gnome-recipes
+    gnome-robots
+    gnome-sound-recorder
+    gnome-sudoku
+    gnome-taquin
+    gnome-tetravex
+    gnome-todo
+    gnome-tweaks
+    gnome-usage
+    hitori
+    iagno
+    lightsoff
+    polari
+    quadrapassel
+    swell-foop
+    sysprof
+    tali
+    # Other
+    emacs
+)
