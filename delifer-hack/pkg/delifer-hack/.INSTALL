@@ -1,9 +1,0 @@
-post_install() {
-    echo "==> Appending delifer repo to pacman.conf"
-    echo "Include = /etc/pacman.d/delifer" >>/etc/pacman.conf
-}
-
-post_remove() {
-    echo "==> Removing delifer repo from pacman.conf"
-    sed -i '\/Include = \/etc\/pacman.d\/delifer/d' /etc/pacman.conf
-}

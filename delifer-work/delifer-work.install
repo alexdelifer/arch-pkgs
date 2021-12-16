@@ -1,7 +1,4 @@
 post_install() {
-    # GDM
-    systemctl enable --now gdm
-    # Plymouth
     post_upgrade
 }
 
